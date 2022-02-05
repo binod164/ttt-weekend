@@ -62,3 +62,7 @@ function render(){
     gameStatus.innerText = `The winner is ${winner === 1 ? "PlayerX" : "PlayerO"}!`;
   }
 }
+
+function handleClick(evt){
+}
+  
