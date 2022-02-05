@@ -43,12 +43,12 @@ function init(){
 }
 
 function render(){
-  boardArray.forEach(function(square,idx){
-  if(square === 1){
+  boardArray.forEach(function(sqr,idx){
+  if(sqr === 1){
     squares[idx].innerText = 'X';
-  }else if(square === -1){
+  }else if(sqr === -1){
     squares[idx].innerText = 'O';
-  }else if(square === null){
+  }else if(sqr === null){
     squares[idx].innerText = '';
   }
   
@@ -62,15 +62,3 @@ function render(){
     gameStatus.innerText = `The winner is ${winner === 1 ? "PlayerX" : "PlayerO"}!`;
   }
 }
-
-function handleClick(evt){
-  let clickedIdx = parseInt(evt.target.id.replace('sq',''))
-  if(boardArray[clickedIdx] || winner){
-    return
-  }
-  boardArray[clickedIdx] = turn;
-  turn = turn * -1;
-  winner = getWinner();
-  render();
-}
-  
