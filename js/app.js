@@ -70,7 +70,7 @@ function render(){
 
 function handleClick(evt){
   let clickedIdx = parseInt(evt.target.id.split('').splice(2))
-  if(boardArray[clickedIdx]|| winner){
+  if(boardArray[clickedIdx]!==null || winner!==null){
     return
   }
   boardArray[clickedIdx] = turn;
