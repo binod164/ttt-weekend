@@ -45,26 +45,26 @@ function init(){
 function render(){
   boardArray.forEach(function(sqr,idx){
     if(sqr === 1){
-    squares[idx].innerText = 'X'
+      squares[idx].innerText = 'X'
     }else if(sqr === -1){
-    squares[idx].innerText = 'O'
+      squares[idx].innerText = 'O'
     }else if(sqr === null){
-    squares[idx].innerText = ''
+      squares[idx].innerText = ''
     }
   })
     if(winner === 1){
-    gameStatus.className = "animate__animated animate__tada"
-    gameStatus.innerText = `The winner is PlayerX!`
-    confetti.start(3000)
+      gameStatus.className = "animate__animated animate__tada"
+      gameStatus.innerText = `The winner is PlayerX!`
+      confetti.start(3000)
     }else if(winner === -1){
-    gameStatus.className = "animate__animated animate__tada"
-    gameStatus.innerText = `The winner is PlayerO!`
-    confetti.start(3000)
-    }else if (winner === "T"){
-		gameStatus.innerText = `It is a tie!`
-    gameStatus.className = "animate__animated animate__backInDown"
-	  }else{
-    gameStatus.innerText = `It is ${turn === 1? "PlayerX" : "PlayerO"}'s turn!`
+      gameStatus.className = "animate__animated animate__tada"
+      gameStatus.innerText = `The winner is PlayerO!`
+      confetti.start(3000)
+    }else if(winner === "T"){
+      gameStatus.innerText = `It is a tie!`
+      gameStatus.className = "animate__animated animate__backInDown"
+    }else{
+      gameStatus.innerText = `It is ${turn === 1? "PlayerX" : "PlayerO"}'s turn!`
     }
 }
 
@@ -82,28 +82,28 @@ function handleClick(evt){
 
 function getWinner(){
   if(Math.abs(boardArray[0] + boardArray[1] + boardArray[2]) === 3){
-  return boardArray[0];
+    return boardArray[0];
   }
   if(Math.abs(boardArray[3] + boardArray[4] + boardArray[5]) === 3){
-  return boardArray[3]
+    return boardArray[3]
   }
   if(Math.abs(boardArray[6] + boardArray[7] + boardArray[8]) === 3){ 
-  return boardArray[6]
+    return boardArray[6]
   }
   if(Math.abs(boardArray[0] + boardArray[3] + boardArray[6]) === 3){ 
-  return boardArray[0]
+    return boardArray[0]
   }
   if(Math.abs(boardArray[1] + boardArray[4] + boardArray[7]) === 3){ 
-  return boardArray[1]
+    return boardArray[1]
   }
   if(Math.abs(boardArray[2] + boardArray[5] + boardArray[8]) === 3){ 
-  return boardArray[2]
+    return boardArray[2]
   }
   if(Math.abs(boardArray[0] + boardArray[4] + boardArray[8]) === 3){ 
-  return boardArray[0]
+    return boardArray[0]
   }
   if(Math.abs(boardArray[2] + boardArray[4] + boardArray[6]) === 3){
-  return boardArray[2]
+    return boardArray[2]
   }
   if (boardArray.includes(null)) {
     return null
