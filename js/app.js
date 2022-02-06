@@ -76,7 +76,6 @@ function handleClick(evt){
   boardArray[clickedIdx] = turn;
   turn = turn * -1
   winner = getWinner()
-  console.log(winner)
   render()
 }
 
