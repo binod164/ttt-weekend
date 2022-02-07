@@ -27,10 +27,11 @@ const resetBtn = document.querySelector(".reset")
 /*----------------------------- Event Listeners -----------------------------*/
 
 squares.forEach(square => square.addEventListener('click', handleClick))
+
 resetBtn.addEventListener('click', init)
 
 
-/*-------------------------------- Functions --------------------------------*/
+// /*-------------------------------- Functions --------------------------------*/
 
 init();
 
@@ -54,11 +55,11 @@ function render(){
   })
     if(winner === 1){
       gameStatus.className = "animate__animated animate__tada"
-      gameStatus.innerText = `The winner is PlayerX!`
+      gameStatus.innerText = `PlayerX wins!`
       confetti.start(3000)
     }else if(winner === -1){
       gameStatus.className = "animate__animated animate__tada"
-      gameStatus.innerText = `The winner is PlayerO!`
+      gameStatus.innerText = `PlayerO wins!`
       confetti.start(3000)
     }else if(winner === "T"){
       gameStatus.innerText = `It is a tie!`
@@ -66,7 +67,7 @@ function render(){
     }else{
       gameStatus.innerText = `It is ${turn === 1? "PlayerX" : "PlayerO"}'s turn!`
     }
-}
+  }
 
 function handleClick(evt){
   let clickedIdx = parseInt(evt.target.id.split('').splice(2))
@@ -77,6 +78,7 @@ function handleClick(evt){
   turn = turn * -1
   winner = getWinner()
   render()
+  
 }
 
 function getWinner(){
