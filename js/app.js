@@ -56,11 +56,11 @@ function render(){
     if(winner === 1){
       gameStatus.className = "animate__animated animate__tada"
       gameStatus.innerText = `PlayerX wins!`
-      confetti.start(3000)
+      confetti.start(2000)
     }else if(winner === -1){
       gameStatus.className = "animate__animated animate__tada"
       gameStatus.innerText = `PlayerO wins!`
-      confetti.start(3000)
+      confetti.start(2000)
     }else if(winner === "T"){
       gameStatus.innerText = `It is a tie!`
       gameStatus.className = "animate__animated animate__backInDown"
