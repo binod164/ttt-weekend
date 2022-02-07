@@ -36,19 +36,23 @@ button{
   font-size: 25px;
   border-color: white;
   border-radius: 10px;
-  color: black;
-  
+  background-color: black;
+  color: white;
+  text-shadow: 0 0 5px rgb(66, 218, 154);
+  box-shadow: 3px 0; 
 }
 
 h1{
   font-family:cursive;
   font-size: 40px; 
   color: white;
+  text-shadow: 0 0 5px rgb(66, 218, 154);
 }
 
 h2{
   font-family: cursive;
-  font-size: 30px; 
+  font-size: 30px;
   color: white;
+  text-shadow: 0 0 5px rgb(66, 218, 154);
 }
 
