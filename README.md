@@ -1,2 +1,2 @@
 # tic-tac-toe starter code
-Play here: https://tiktaktoe111.herokuapp.com/
+Play here: https://binod164.github.io/ttt-weekend/
